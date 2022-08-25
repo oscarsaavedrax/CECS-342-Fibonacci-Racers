@@ -9,3 +9,11 @@ int fibo(int n)
     else
         return fibo(n - 1) + fibo(n - 2);
 }
+
+int main()
+{
+    for (int i = 1; i <= 50; i++)
+        cout << i << ":" << fibo(i) << endl;
+
+    return 0;
+}
