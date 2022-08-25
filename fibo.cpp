@@ -2,7 +2,7 @@
 using namespace std;
 
 // Fibo function
-int fibo(int n)
+long long int fibo(int n)
 {
     if (n == 1 || n == 0)
         return 1;
