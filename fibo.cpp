@@ -3,8 +3,9 @@
 // Prog 1 - Fibonacci Race
 // September 6, 2022
 //
-// I certify that this program is my own original work. I di not copy any part of this program from
-// any other source. I further certify that I typed each and every line of code in this program.
+// I certify that this program is my own original work. I did not copy any part of this program from
+// any other source besides the professor. I further certify that I typed each and every line of code 
+// in this program.
 
 #include <iostream>
 #include <chrono>
@@ -30,13 +31,14 @@ int main()
         // Time before fibonacci function call
         auto before = chrono::steady_clock::now();
         f = fibo(i);
-        
         // Time after fibonacci function call
         auto after = chrono::steady_clock::now();
+
+        // Calculate differnece in times
         auto diff = after - before;
         auto delta = after - now;
 
-        // Display fibonacci numbers and timestamps
+        // Print the results
         cout << i << ": " << f;
         cout << "\tTime since last num: " 
              << chrono::duration_cast<chrono::milliseconds>(after - before).count() << " ms";
