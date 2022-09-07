@@ -23,12 +23,14 @@ int main()
 {
     // Get start time
     auto now = chrono::steady_clock::now();
+    long long int f;
 
     // Get fibonacci numbers up to 50
     for (int i = 1; i <= 50; i++){
         // Time before fibonacci function call
         auto before = chrono::steady_clock::now();
-        long long int f = fibo(i);
+        f = fibo(i);
+        
         // Time after fibonacci function call
         auto after = chrono::steady_clock::now();
         auto diff = after - before;
@@ -42,6 +44,6 @@ int main()
              << chrono::duration_cast<chrono::milliseconds>(after - now).count() << " ms";
         cout << endl;
     }
-   
+
     return 0;
 }
